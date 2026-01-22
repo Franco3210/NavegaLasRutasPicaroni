@@ -1,0 +1,39 @@
+.navbar {
+  background-color: #003833;
+  padding: 1rem 100rem;
+  position:absolute;
+   top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 70px;
+  padding: 0;
+}
+
+.navbar-item a {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-family: Georgia;
+  padding: 1rem 5rem;
+  font-size: 35px;
+  transition: background 0.3s;
+}
+
+.navbar-item a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.btnCartWidget {
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-top: 0;
+}
