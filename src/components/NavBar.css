@@ -1,10 +1,31 @@
-.navbar {
-  background-color: #003833;
-  padding: 1rem 100rem;
-  position:absolute;
-   top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.store-title{
+
+    font-size: 2.4rem;
+    font-weight: 800;
+    color:#F5F5F5;
+    letter-spacing:2px;
+    position:relative;
+}
+
+.store-title::after{
+    content:"";
+    width:60%;
+    height:3px;
+    background:#D4AF37;
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    border-radius:2px;
+}
+
+.navbar{
+    background-color: #1F3D2B;
+    padding: 18px 40px;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.25);
 }
 
 .navbar-list {
@@ -30,7 +51,6 @@
 }
 
 .btnCartWidget {
-  background: none;
   display: flex;
   align-items: center;
   justify-content: center;
