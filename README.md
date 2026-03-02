@@ -1,16 +1,63 @@
-# React + Vite
+Kiosco de Franco
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+E-commerce hecho con React
 
-Currently, two official plugins are available:
+Descripción: Página web interactiva para un carrito de compras donde el usuario puede ver un catálogo de productos con su información detallada y debida categoría.
+El usuario podrá agregar productos al carrito, quitarlos del mismo, realizar un pedido y obtener su ID de compra.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Tecnologías utilizadas: -React + Vite -Firebase -JavaScript -CSS
 
-## React Compiler
+Funcionalidades principales: -Listado de productos. -Carrito de compras. -División por categorías. -Generación de ID de compra.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Estructura del proyecto:
 
-## Expanding the ESLint configuration
+src/
+├── assets/
+│ └── react.svg
+├── components/
+│ ├── Cart.jsx
+│ ├── Cart.css
+│ ├── CartWidget.jsx
+│ ├── Error.jsx
+│ ├── Checkout.jsx
+│ ├── Item.jsx
+│ ├── ItemCount.jsx
+│ ├── ItemDetail.jsx
+│ ├── ItemDetailContainer.jsx
+│ ├── ItemListContainer.jsx
+│ ├── ItemListContainer.css
+│ ├── NavBar.jsx
+│ └── NavBar.css
+├── context/
+│ ├── CartContext.jsx
+├── service/
+│ ├── firebase.jsx
+│ └├── App.jsx ├── App.css ├── index.css └── main.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Instalación y uso
+
+ 1-Clonar el repositorio:
+
+    git clone https://github.com/Franco3210/NavegaLasRutasPicaroni
+
+ 2-Instalar dependencias:
+
+    npm install
+
+ 3-Ejecutar el proyecto:
+
+    npm run dev
+
+Licencia
+
+   Este proyecto está bajo la licencia MIT.  
+   Puedes usarlo, modificarlo y distribuirlo libremente.
+
+Caracteristicas
+
+   Características
+
+- Interfaz amigable y minimalista.
+- Navegación fluida.
+- Base de datos integrada (Firebase).
+- Soporte multiplataforma

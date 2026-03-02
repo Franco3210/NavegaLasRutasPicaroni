@@ -1,27 +1,45 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import { getOneProduct } from "../mock/asyncService";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../service/firebase"; 
+import Loader from "./Loader";
+
 
 const ItemDetailContainer = () => {
 
-    const [detail, setDetail] = useState(null); 
+    const [detail, setDetail] = useState(null);
     const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
     useEffect(() => {
 
-        setLoading(true);
+        const fetchProduct = async () => {
+            setLoading(true);
 
-        getOneProduct(Number(id))
-            .then(res => setDetail(res))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false));
+            try {
+                const docRef = doc(db, "items", id);
+                const docSnap = await getDoc(docRef);
+
+                if (docSnap.exists()) {
+                    setDetail({ id: docSnap.id, ...docSnap.data() });
+                } else {
+                    setDetail(null);
+                }
+
+            } catch (error) {
+                console.log("Error trayendo producto:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchProduct();
 
     }, [id]);
 
     if (loading) {
-        return <h2>Cargando producto...</h2>;
+        return <Loader />;
     }
 
     if (!detail) {
@@ -30,7 +48,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            <ItemDetail product={detail}/>
+            <ItemDetail product={detail} />
         </div>
     );
 }

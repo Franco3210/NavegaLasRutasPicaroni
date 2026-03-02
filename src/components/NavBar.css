@@ -1,3 +1,39 @@
+.dropdown-container {
+  position: relative;
+}
+
+.products-label {
+  color: white;
+  font-weight: bold;
+  font-family: Georgia;
+  padding: 1rem 5rem;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1F3D2B;
+  border: 2px solid #D4AF37;
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 200px;
+  z-index: 999;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.dropdown-menu a:hover {
+  color: #D4AF37;
+}
 .store-title{
 
     font-size: 2.4rem;

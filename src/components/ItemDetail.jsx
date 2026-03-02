@@ -1,10 +1,16 @@
 import ItemCount from "./ItemCount";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
-const ItemDetail = ({ product }) => {
 
+
+   const ItemDetail = ({ product }) => {
+    const { addToCart } = useContext(CartContext);
     const handleAdd = (quantity) => {
-        console.log("Agregaste:", quantity);
-    };
+    addToCart(product, quantity);
+  };
+
+
 
     return(
         <div>
